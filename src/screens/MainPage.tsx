@@ -1,15 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import LoginScreen from './src/screens/LoginScreen';
 
-const App = () => {
+const MainPage = () => {
   return (
     <View>
-      <LoginScreen />
+      <Text>MainPage</Text>
     </View>
   );
 };
 
-export default App;
+export default MainPage;
 
 const styles = StyleSheet.create({});
