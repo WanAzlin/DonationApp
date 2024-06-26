@@ -1,16 +1,38 @@
 import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
 import React from 'react';
+import Container from '../components/organism/Container';
+import Heading from '../components/Headers/Heading';
+import Spacer from '../components/atoms/Divider/Spacer';
+import Caption from '../components/Headers/Caption';
+import PrimaryInput from '../components/molecules/button';
+import PrimaryButton from '../components/molecules/PrimaryButton';
+import Paragraph from '../components/Headers/Parapgraph';
 
 const LoginScreen = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>This is Login Screen</Text>
+    <Container>
+      <View style={styles.wrapper}>
+        <Heading text={'Welcome Back'} variant="h6" weight="extrabold" />
+        <Spacer height={8} />
+        <Spacer height={8} />
+        <PrimaryInput keyboardType={'email-address'} label={'Email'} />
+        <Spacer height={8} />
+        <PrimaryInput secureTextEntry={true} label={'Password'} />
+        <Spacer height={24} />
+        <PrimaryButton title={'Login'} />
+        <Spacer height={8} />
+        <Paragraph
+          text={'Do not have an account?'}
+          weight={'bold'}
+          align={'center'}
+        />
       </View>
-    </SafeAreaView>
+    </Container>
   );
 };
 
 export default LoginScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  wrapper: {},
+});
