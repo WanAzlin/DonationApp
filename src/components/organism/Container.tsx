@@ -6,8 +6,9 @@ import {
   StyleSheet,
   View,
   Dimensions,
+  SafeAreaView,
 } from 'react-native';
-import {SafeAreaView, SafeAreaViewProps} from 'react-native-safe-area-context';
+import {SafeAreaViewProps} from 'react-native-safe-area-context';
 import Header from '../Headers/Header';
 import {SPACING} from '../../assets/theme';
 
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
   wrapper: {
     padding: 16,
     flex: 1,
-    paddingTop: SPACING.space_16,
+    paddingTop: SPACING.space_160,
     paddingLeft: SPACING.space_16,
     paddingRight: SPACING.space_16,
   },

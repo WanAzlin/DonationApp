@@ -12,17 +12,17 @@ const LoginScreen = () => {
   return (
     <Container>
       <View style={styles.wrapper}>
-        <Heading text={'Welcome Back'} variant="h6" weight="extrabold" />
+        <Heading text={'Welcome Back'} variant="h5" weight="extrabold" />
         <Spacer height={8} />
         <Spacer height={8} />
         <PrimaryInput keyboardType={'email-address'} label={'Email'} />
         <Spacer height={8} />
         <PrimaryInput secureTextEntry={true} label={'Password'} />
-        <Spacer height={24} />
+        <Spacer height={32} />
         <PrimaryButton title={'Login'} />
-        <Spacer height={8} />
+        <Spacer height={16} />
         <Paragraph
-          text={'Do not have an account?'}
+          text={'Do not have an account? Login'}
           weight={'bold'}
           align={'center'}
         />

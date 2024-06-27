@@ -10,7 +10,7 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.load
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.soloader.SoLoader
-
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost =
@@ -31,7 +31,14 @@ class MainApplication : Application(), ReactApplication {
 
   override val reactHost: ReactHost
     get() = getDefaultReactHost(applicationContext, reactNativeHost)
-
+  @Override
+protected List<ReactPackage> getPackages() {
+    return Arrays.asList(
+            new MainReactPackage(),
+            /**other packages of yours**/
+            new SafeAreaContextPackage()
+    );
+}
   override fun onCreate() {
     super.onCreate()
     SoLoader.init(this, false)
