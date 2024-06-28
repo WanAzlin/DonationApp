@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   wrapper: {
     padding: 16,
     flex: 1,
-    paddingTop: SPACING.space_160,
+    paddingTop: SPACING.space_120,
     paddingLeft: SPACING.space_16,
     paddingRight: SPACING.space_16,
   },

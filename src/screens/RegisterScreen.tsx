@@ -14,8 +14,6 @@ const LoginScreen = () => {
       <View style={styles.wrapper}>
         <Heading text={'Hello and Welcome!'} variant="h5" weight="extrabold" />
         <Spacer height={8} />
-        {/* <Caption text={'Email'} weight="light" /> */}
-        <Spacer height={8} />
         <PrimaryInput
           keyboardType={'email-address'}
           label={'First & Last Name'}
@@ -26,12 +24,6 @@ const LoginScreen = () => {
         <PrimaryInput secureTextEntry={true} label={'Password'} />
         <Spacer height={32} />
         <PrimaryButton title={'Register'} />
-        <Spacer height={16} />
-        <Paragraph
-          text={'Have an account? Login'}
-          weight={'bold'}
-          align={'center'}
-        />
       </View>
     </Container>
   );
