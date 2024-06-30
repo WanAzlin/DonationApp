@@ -5,14 +5,18 @@ import RegisterScreen from './src/screens/RegisterScreen';
 import MainPage from './src/screens/MainPage';
 import MainNavigation from './src/navigation/MainNavigation';
 import {NavigationContainer} from '@react-navigation/native';
+import DetailScreen from './src/screens/DetailScreen';
+import DonateScreen from './src/screens/DonateScreen';
 // import 'react-native-gesture-handler';
 const App = () => {
   return (
     <SafeAreaView>
       <View>
-        <MainPage />
+        <DonateScreen />
+        {/* <DetailScreen />
+        {/* <MainPage />
         <LoginScreen />
-        {/* <RegisterScreen /> */}
+        <RegisterScreen /> */}
       </View>
     </SafeAreaView>
     // <NavigationContainer>
