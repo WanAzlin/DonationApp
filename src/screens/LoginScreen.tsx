@@ -7,8 +7,13 @@ import Caption from '../components/Headers/Caption';
 import PrimaryInput from '../components/molecules/button';
 import PrimaryButton from '../components/molecules/PrimaryButton';
 import Paragraph from '../components/Headers/Parapgraph';
-
+import {useNavigation} from '@react-navigation/native';
+import RegisterScreen from './RegisterScreen';
 const LoginScreen = () => {
+  const navigation = useNavigation();
+  function navigateToScreen(screen: string) {
+    navigation.navigate(screen as never);
+  }
   return (
     <Container>
       <View style={styles.wrapper}>
@@ -18,7 +23,10 @@ const LoginScreen = () => {
         <Spacer height={8} />
         <PrimaryInput secureTextEntry={true} label={'Password'} />
         <Spacer height={32} />
-        <PrimaryButton title={'Login'} />
+        <PrimaryButton
+          title={'Login'}
+          onPress={() => navigateToScreen('MainPage')}
+        />
         <Spacer height={16} />
         <Paragraph
           text={'Do not have an account? Register'}

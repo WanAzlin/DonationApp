@@ -1,0 +1,65 @@
+# Query: appdelegate
+# ContextLines: 1
+
+24 results - 5 files
+
+ios/Podfile.lock:
+   960      - ReactCommon
+   961:   - React-RCTAppDelegate (0.74.2):
+   962      - RCT-Folly (= 2024.01.01.00)
+
+  1207    - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
+  1208:   - React-RCTAppDelegate (from `../node_modules/react-native/Libraries/AppDelegate`)
+  1209    - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
+
+  1303      :path: "../node_modules/react-native/Libraries/NativeAnimation"
+  1304:   React-RCTAppDelegate:
+  1305:     :path: "../node_modules/react-native/Libraries/AppDelegate"
+  1306    React-RCTBlob:
+
+  1378    React-RCTAnimation: d7f4137fc44a08bba465267ea7cb1dbdb7c4ec87
+  1379:   React-RCTAppDelegate: 2b3f4d8009796af209a0d496e73276b743acee08
+  1380    React-RCTBlob: c6c3e1e0251700b7bea036b893913f22e2b9cb47
+
+ios/DonationApp/AppDelegate.h:
+  1: #import <RCTAppDelegate.h>
+  2  #import <UIKit/UIKit.h>
+  3  #import <RNGestureHandler/RNGestureHandler.h>
+  4: @interface AppDelegate : RCTAppDelegate
+  5  
+
+ios/DonationApp/AppDelegate.mm:
+  1: #import "AppDelegate.h"
+  2  
+
+  4  
+  5: @implementation AppDelegate
+  6  
+
+ios/DonationApp/main.m:
+  2  
+  3: #import "AppDelegate.h"
+  4  
+
+  7    @autoreleasepool {
+  8:     return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+  9    }
+
+ios/DonationApp.xcodeproj/project.pbxproj:
+   12  		128F6C5548304ABCB536F3BB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C212D96557E1E4EC15E11D1B /* PrivacyInfo.xcprivacy */; };
+   13: 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+   14  		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+
+   34  		13B07F961A680F5B00A75B9A /* DonationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+   35: 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DonationApp/AppDelegate.h; sourceTree = "<group>"; };
+   36: 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = DonationApp/AppDelegate.mm; sourceTree = "<group>"; };
+   37  		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DonationApp/Images.xcassets; sourceTree = "<group>"; };
+
+   91  			children = (
+   92: 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+   93: 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+   94  				13B07FB51A68108700A75B9A /* Images.xcassets */,
+
+  400  			files = (
+  401: 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+  402  				13B07FC11A68108700A75B9A /* main.m in Sources */,

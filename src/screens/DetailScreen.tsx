@@ -3,15 +3,15 @@ import React from 'react';
 import ContainerMainPage from '../components/organism/ContainerMainPage';
 import PrimaryButton from '../components/molecules/PrimaryButton';
 import Spacer from '../components/atoms/Divider/Spacer';
-
+import {useNavigation} from '@react-navigation/native';
 const DetailScreen = () => {
+  const navigation = useNavigation();
+  function navigateToScreen(screen: string) {
+    navigation.navigate(screen as never);
+  }
   return (
     <ContainerMainPage>
       <ScrollView>
-        <Image
-          source={require('../assets/img/back.png')}
-          style={styles.iconBP}
-        />
         <View style={styles.greyBox} />
         <Text style={styles.category}>Environment</Text>
         <Text style={styles.boxText}>Tree Cactus Limitation</Text>
@@ -26,7 +26,10 @@ const DetailScreen = () => {
           lives for the better.
         </Text>
         <Spacer height={24} />
-        <PrimaryButton title={'Donate'} />
+        <PrimaryButton
+          title={'Donate'}
+          onPress={() => navigateToScreen('DonateScreen')}
+        />
       </ScrollView>
     </ContainerMainPage>
   );

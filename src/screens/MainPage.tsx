@@ -8,8 +8,13 @@ import {SPACING} from '../assets/theme';
 import HorizontalCategory from '../components/molecules/HorizontalCategory';
 import ContainerMainPage from '../components/organism/ContainerMainPage';
 import MainPageContent from '../components/organism/MainPageContent';
-
+import PrimaryButton from '../components/molecules/PrimaryButton';
+import {useNavigation} from '@react-navigation/native';
 const MainPage = () => {
+  const navigation = useNavigation();
+  function navigateToScreen(screen: string) {
+    navigation.navigate(screen as never);
+  }
   return (
     <ContainerMainPage>
       <ScrollView>
@@ -30,6 +35,10 @@ const MainPage = () => {
           <HorizontalCategory />
           <MainPageContent />
           <MainPageContent />
+          <PrimaryButton
+            title={'Donate Now'}
+            onPress={() => navigateToScreen('DetailScreen')}
+          />
         </View>
       </ScrollView>
     </ContainerMainPage>

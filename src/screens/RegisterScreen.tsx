@@ -7,12 +7,18 @@ import Caption from '../components/Headers/Caption';
 import PrimaryInput from '../components/molecules/button';
 import PrimaryButton from '../components/molecules/PrimaryButton';
 import Paragraph from '../components/Headers/Parapgraph';
-
+import {useNavigation} from '@react-navigation/native';
 const LoginScreen = () => {
+  const navigation = useNavigation();
+  function navigateToScreen(screen: string) {
+    navigation.navigate(screen as never);
+  }
   return (
     <Container>
       <View style={styles.wrapper}>
         <Heading text={'Hello and Welcome!'} variant="h5" weight="extrabold" />
+        <Spacer height={8} />
+        {/* <Caption text={'Email'} weight="light" /> */}
         <Spacer height={8} />
         <PrimaryInput
           keyboardType={'email-address'}
@@ -23,7 +29,10 @@ const LoginScreen = () => {
         <Spacer height={8} />
         <PrimaryInput secureTextEntry={true} label={'Password'} />
         <Spacer height={32} />
-        <PrimaryButton title={'Register'} />
+        <PrimaryButton
+          title={'Register'}
+          onPress={() => navigateToScreen('LoginScreen')}
+        />
       </View>
     </Container>
   );
